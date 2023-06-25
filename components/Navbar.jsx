@@ -1,14 +1,21 @@
 import Link from "next/link";
 import SearchForm from "./SearchForm";
-import { BsHeart, BsCart3, BsPerson } from "react-icons/bs";
+import { BsList, BsHeart, BsCart3, BsPerson } from "react-icons/bs";
 
 const Navbar = () => {
   return (
     <div className=" bg-primary-color flex items-center justify-center p-5 sm:py-10">
       <div className="flex flex-wrap items-center justify-between w-full max-w-5xl gap-3">
-        {/* LOGO */}
-        <div className="uppercase text-white font-bold text-xl sm:text-2xl">
-          E-Commerce
+        <div className="flex items-center justify-center gap-2">
+          {/* HAMBURGER MENU FOR MOBILE NAVIGATION */}
+          <button className="sm:hidden text-white cursor-pointer hover:scale-110 duration-100">
+            <BsList size={24} />
+          </button>
+
+          {/* LOGO */}
+          <p className="uppercase text-white font-bold text-xl sm:text-2xl">
+            E-Commerce
+          </p>
         </div>
 
         {/* SEARCH BAR */}
